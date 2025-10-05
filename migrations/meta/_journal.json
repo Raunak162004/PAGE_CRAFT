@@ -8,6 +8,13 @@
       "when": 1759687683913,
       "tag": "0000_ancient_skreet",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1759690221773,
+      "tag": "0001_generate_folder_schema",
+      "breakpoints": true
     }
   ]
 }
