@@ -6,8 +6,8 @@ dotenv.config();
 export default {
     schema: "./src/lib/supabase/schema.ts",
     out: "./migrations",
-    driver: 'pg',
     dbCredentials: {    
-        connectionString: process.env.DATABASE_URL || "",
-    }
+        url: process.env.DATABASE_URL || "",
+    },
+    dialect: 'postgresql',
 }
