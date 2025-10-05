@@ -15,6 +15,13 @@
       "when": 1759690221773,
       "tag": "0001_generate_folder_schema",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1759693458567,
+      "tag": "0002_melted_madrox",
+      "breakpoints": true
     }
   ]
 }
