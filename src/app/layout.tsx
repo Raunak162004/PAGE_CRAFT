@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import db from "@/lib/supabase/db";
+import { ThemeProvider } from "@/lib/providers/next-theme-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,9 +27,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className="dark"
+        style={{ colorScheme: "dark" }}
+        cz-shortcut-listen="true"
       >
-        {children}
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
