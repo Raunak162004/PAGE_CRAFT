@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface TitleSectionProps {
   title: string;
@@ -6,11 +6,7 @@ interface TitleSectionProps {
   pill: string;
 }
 
-const TitleSection: React.FC<TitleSectionProps> = ({
-  title,
-  subheading,
-  pill,
-}) => {
+const TitleSection = ({ title, subheading, pill }: TitleSectionProps) => {
   return (
     <React.Fragment>
       <section
@@ -54,7 +50,7 @@ const TitleSection: React.FC<TitleSectionProps> = ({
               {title}
             </h2>
             <p
-              className="dark:text-washed-purple-700 sm:max-w-[450px]
+              className="dark:text-[var(--washed-purple-700)] sm:max-w-[450px]
               md:text-center
             "
             >

@@ -45,6 +45,8 @@ html,body{
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --color-brand-primaryBlue: var(--brand-primaryBlue);
+  --color-brand-primaryPurple: var(--brand-primaryPurple);
 }
 
 :root {
@@ -189,5 +191,18 @@ html,body{
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+.animate-slide {
+  animation: 15s slide linear infinite;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
   }
 }
