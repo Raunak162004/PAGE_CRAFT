@@ -3,6 +3,14 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import db from "@/lib/supabase/db";
 import { ThemeProvider } from "@/lib/providers/next-theme-provider";
+import { DM_Sans } from 'next/font/google';
+
+
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans", // or use className instead
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"], // optional: define weights
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className="dark"
+        className={`dark ${dmSans.className}`}
         style={{ colorScheme: "dark" }}
         cz-shortcut-listen="true"
       >
